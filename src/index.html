@@ -8,8 +8,8 @@
   </head>
   <body>
     <header>
-      <div id="header1"><img class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Pok%C3%A9mon_GO_logo.svg/1200px-Pok%C3%A9mon_GO_logo.svg.png"></div>
-      <div id="header2"><input type="text" id="search" placeholder="   Buscar Pokemon   🔍"></div>
+      <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Pok%C3%A9mon_GO_logo.svg/1200px-Pok%C3%A9mon_GO_logo.svg.png">
+      <input type="text" id="search" placeholder="   Buscar Pokemon   🔍">
     </header>
     <div id="container">
       <div>
@@ -17,10 +17,10 @@
         <label id="icon" for="check" ><img src="menu.png"></label>
         <div class="bar">
           <nav>
-            <a href=""><div class="link">Pokedex</div></a>
-            <a href=""><div class="link">Ganar caramelos</div></a>
-            <a href=""><div class="link">Comparar pokemones</div></a>
-            <a href=""><div class="link">Datos de poder</div></a>
+            <button id="showPokedex" class="link">Pokedex</button>
+            <button id="showGetCandy" class="link">Ganar caramelos</button>
+            <button class="link">Comparar pokemones</button>
+            <button class="link">Datos de poder</button>
           </nav>
         </div>
       </div>
@@ -42,7 +42,20 @@
           </div>
           <div id="pokemonList" class="pokemonList"></div>
         </div>
-        <div id="getCandy"></div>   
+        <div id="getCandy">
+          <p class="title">GANAR CARAMELOS</p>
+          <p>Elige tu compañero pokemon preferido y gana caramelos recorriendo km a su lado.
+            Recuerda que cada Pokémon tiene un número de kilómetros definido y puedes cambiar de compañero cuando lo desees.</p>
+          <div>
+            <button id="oneKm">Caminar 1km</button>
+            <button id="threeKm">Caminar 3km</button>
+            <button id="fiveKm">Caminar 5km</button>
+          </div>
+          <p id="total"></p>
+          <div id="pokemonList2" class="pokemonList">
+          </div>
+        </div>   
+      </div>   
       </div>
     </div>
     <footer >

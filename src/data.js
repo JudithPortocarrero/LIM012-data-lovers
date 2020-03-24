@@ -26,7 +26,16 @@ export const ordenarArrayZa = (arr) => {
   });
   return arrPokemonesZa;
 };
-// export const filtrarKM = (arr) => {
-//   const arrFiltradoKM = arr.filter(object => object['buddy-distance-km'] === '3');
-//   return arrFiltradoKM;
-// };
+// filtrar por km
+export const filtrarOneKm = (arr) => {
+  const arrFiltradoKM = arr.filter(object => object['buddy-distance-km'] === '1');
+  return arrFiltradoKM;
+};
+export const filtrarthreeKm = (arr) => {
+  const arrFiltradoKM = arr.filter(object => object['buddy-distance-km'] === '3');
+  return arrFiltradoKM;
+};
+export const filtrarFiveKm = (arr) => {
+  const arrFiltradoKM = arr.filter(object => object['buddy-distance-km'] === '5');
+  return arrFiltradoKM;
+};

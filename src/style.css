@@ -1,9 +1,15 @@
+.ocultar{
+    display: none;
+ }
 body{
     background: #F6F8FF;
     width: 100%;
     height: 100%;
+    margin-top: 0%;
+    margin-left:0%;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.5em;
+    color: #413D3D;
+    font-size: 1em;
     line-height: 1em;/*interlineado de texto*/
     display:flex;
     flex:wrap;
@@ -55,28 +61,25 @@ header{
     background: #FFCB05;
     height: 100%;
     width: 15%;
-    position: absolute;/*quedefijoenpc*/
-    text-align: justify;
+    position: absolute;
     transition: all .2s linear;
-    -webkit-transition: all .2s linear;
 }
 nav{
     width: 100%;
     position: absolute;
     top: 60px;
 }
-nav a{
-    text-decoration: none;
-}
 .link{
+    width: 100%;
+    text-align: justify;
     background-color: #FFCB05;
     padding: 1em;
-    font-size: 1em;/*tamañodeletrabarraizquierda*/
+    font-size: 1em;
+    /*tamañodeletrabarraizquierda*/
     transition: all .2s linear;
     color: #413D3D;
+    border: 0;
     border-bottom: 2px solid #F6F8FF ;
-    -webkit-transition: all .2s linear;
-
 }
 .link:hover{
     background-color: #205FA7;
@@ -123,7 +126,13 @@ border-top: 1px solid #F6F8FF;
 text-decoration: none;
 box-sizing: border-box;
 }
-ul.dropDown li ul { max-height: 0; margin: 0; padding: 0; list-style: none; overflow: hidden; transition: .3s all ease-in; -webkit-transition: .3s all ease-in; -moz-transition: .3s all ease-in; -ms-transition: .3s all ease-in; -o-transition: .3s all ease-in;
+ul.dropDown li ul { 
+    max-height: 0; 
+    margin: 0; 
+    padding: 0; 
+    list-style: none; 
+    overflow: hidden; 
+    transition: .3s all ease-in; 
 }
 ul.dropDown li li a {
 padding: 10px 10px 10px 40px;
@@ -147,7 +156,6 @@ color: #F6F8FF;
 .pokemonList{
     width: 100%;
     height: 95%; 
-    overflow : scroll;
     display: flex;
     line-height: 0.5em;
     justify-content: space-around;
@@ -165,23 +173,12 @@ color: #F6F8FF;
     }
     #section{
         width: 100%;
-        padding-left: 3%;
-        padding-right: 3%;
+        padding: 0;
     }
     .image{
-        width: 50%;
-        height: 100%;
+        width: 30%;
+        height: 50%;
         margin-top: 1%;
-    }
-    #header1{
-        width: 40%;
-        height: 100%;
-        margin-left: 10%;
-    }
-    #header2{
-        width: 60%;
-        height: 100%;
-        margin-left: 10%;
     }
     .bar{
         left: -300px;
@@ -192,7 +189,7 @@ color: #F6F8FF;
     }
     #check:checked ~ .bar{
         transform: translateX(300px);
-}
+    }
     header{
         height: 10%;
     }
@@ -204,7 +201,6 @@ color: #F6F8FF;
     }
     .pokemonList{
         line-height: 0.5em;
-        overflow : visible;
     }
 }
 footer{
@@ -219,29 +215,29 @@ footer{
     align-content: center;
     justify-content: center;
 }
-    .social{
-        padding-top: 0.8em;
-    }
-    .icon{
-        color:white;
-        text-decoration: none;
-        transition: all.5s;
-        padding: 0.3em;
-        width: 1.5em;
-        border-radius: 1rem;
-    }
-        .icon-facebook{
-            background: #2E406E;
-        }
-        .icon-twitter{
-            background: #339DC5;
-        }
-        .icon-youtube{
-            background: #E83028;
-        }
-        .icon-instagram{
-            background: #3f60a5;
-        }
-        .icon:hover{
-            padding: 0.8rem;
-        }
+.social{
+    padding-top: 0.8em;
+}
+.icon{
+    color:white;
+    text-decoration: none;
+    transition: all.5s;
+    padding: 0.3em;
+    width: 1.5em;
+    border-radius: 1rem;
+}
+.icon-facebook{
+    background: #2E406E;
+}
+.icon-twitter{
+    background: #339DC5;
+}
+.icon-youtube{
+    background: #E83028;
+}
+.icon-instagram{
+    background: #3f60a5;
+}
+.icon:hover{
+    padding: 0.8rem;
+}
