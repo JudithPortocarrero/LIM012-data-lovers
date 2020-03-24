@@ -1,5 +1,5 @@
 import {
-  ordenarArrayAsc, ordenarArrayDes, ordenarArrayAz, ordenarArrayZa, filtrarKM,
+  ordenarArrayAsc, ordenarArrayDes, ordenarArrayAz, ordenarArrayZa, // filtrarKM,
 } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
@@ -21,25 +21,24 @@ const showPokemon = (arr) => {
 function cargar() {
   showPokemon(ordenarArrayAsc(arrPokemon));
   // FILTRADO POR KM
-  showPokemon(filtrarKM(arrPokemon));
+  // showPokemon(filtrarKM(arrPokemon));
   // console.log(filtrarKM(arrPokemon).length);
-  // ordenarArrayAsc(arrPokemon).forEach(showPokemon);
 }
 window.addEventListener('load', cargar, false);
 
-document.getElementById('upward').addEventListener('click', () => {
+document.querySelector('#upward').addEventListener('click', () => {
   document.getElementById('pokemonList').innerHTML = '';
   showPokemon(ordenarArrayAsc(arrPokemon));
 });
-document.getElementById('falling').addEventListener('click', () => {
+document.querySelector('#falling').addEventListener('click', () => {
   document.getElementById('pokemonList').innerHTML = '';
   showPokemon(ordenarArrayDes(arrPokemon));
 });
-document.getElementById('sortAz').addEventListener('click', () => {
+document.querySelector('#sortAz').addEventListener('click', () => {
   document.getElementById('pokemonList').innerHTML = '';
   showPokemon(ordenarArrayAz(arrPokemon));
 });
-document.getElementById('sortZa').addEventListener('click', () => {
+document.querySelector('#sortZa').addEventListener('click', () => {
   document.getElementById('pokemonList').innerHTML = '';
   showPokemon(ordenarArrayZa(arrPokemon));
 });
