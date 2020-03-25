@@ -72,6 +72,7 @@ nav{
 .link{
     width: 100%;
     text-align: justify;
+    outline:none;
     background-color: #FFCB05;
     padding: 1em;
     font-size: 1em;
@@ -83,6 +84,7 @@ nav{
 }
 .link:hover{
     background-color: #205FA7;
+    color: #F6F8FF;
 }
 #section{
     width: 85%;
@@ -109,7 +111,7 @@ ul.dropDown {
 margin: 10px auto;
 padding: 0;
 list-style: none;
-width: 25%;
+width: 12%;
 font-size: 0.8em;
 text-align: center;
 }
@@ -193,6 +195,9 @@ color: #F6F8FF;
     header{
         height: 10%;
     }
+    ul.dropDown {
+        width: 25%;
+        }
     .conteinerPokemon{
         width: 20%;
         margin: 2%;
@@ -240,4 +245,16 @@ footer{
 }
 .icon:hover{
     padding: 0.8rem;
+}
+.btnGet{
+    background: #FFCB05;
+    border: 2px solid #F6F8FF ;
+    padding: 0.5em;
+    font-size: 1em;
+    color: #413D3D;
+    outline:none;
+}
+.btnGet:hover{
+    background-color: #205FA7;
+    color: #F6F8FF;
 }

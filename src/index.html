@@ -20,7 +20,7 @@
             <button id="showPokedex" class="link">Pokedex</button>
             <button id="showGetCandy" class="link">Ganar caramelos</button>
             <button class="link">Comparar pokemones</button>
-            <button class="link">Datos de poder</button>
+            <button id="showPowerData" class="link">Datos de poder</button>
           </nav>
         </div>
       </div>
@@ -47,14 +47,27 @@
           <p>Elige tu compañero pokemon preferido y gana caramelos recorriendo km a su lado.
             Recuerda que cada Pokémon tiene un número de kilómetros definido y puedes cambiar de compañero cuando lo desees.</p>
           <div>
-            <button id="oneKm">Caminar 1km</button>
-            <button id="threeKm">Caminar 3km</button>
-            <button id="fiveKm">Caminar 5km</button>
+            <button id="oneKm" class="btnGet">Caminar 1km</button>
+            <button id="threeKm" class="btnGet">Caminar 3km</button>
+            <button id="fiveKm" class="btnGet">Caminar 5km</button>
+            <button id="twentyKm" class="btnGet">Caminar 5km</button>
           </div>
           <p id="total"></p>
           <div id="pokemonList2" class="pokemonList">
           </div>
-        </div>   
+        </div> 
+        <div id="powerData">
+          <p class="title">DATOS DE PODER</p>
+          <p>Podras ver los pokemones de mayor a menor porcentajes segun la opción que elijas para ordenar y ver que pokemon es mas poderoso</p>
+          <div>
+            <button id="ataque" class="btnGet">Ataque</button>
+            <button id="defensa" class="btnGet">defensa</button>
+            <button id="aguante" class="btnGet">Aguante</button>
+            <button id="maxCp" class="btnGet">Max CP</button>
+            <button id="maxHp" class="btnGet">Max HP</button>
+          </div>
+          <table id="mostrar"></table>
+        </div>  
       </div>   
       </div>
     </div>
