@@ -1,47 +1,51 @@
+.ocultar{
+    display: none;
+ }
 body{
-    margin: 0;/*este pegado a la caja*/
-    padding: 0;
     background: #F6F8FF;
     width: 100%;
     height: 100%;
+    margin-top: 0%;
+    margin-left:0%;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.5em;
+    color: #413D3D;
+    font-size: 1em;
     line-height: 1em;/*interlineado de texto*/
+    display:flex;
+    flex:wrap;
+    flex-direction: column;
+    align-items: flex-start;
 }
 header{
     width: 100%;
     height: 10%;
-    display: flex;
     background: #205FA7;
-    left: 0;/* Posicionamos la cabecera al lado izquierdo */
-    top: 0;/* Posicionamos la cabecera pegada arriba */
-}
-#header1{
-    width: 70%;
-    height: 100%;
-    margin-left: 5%;
-}
-
-#header2{
-    width: 30%;
-    height: 100%;
-    margin-left: 10%;
+    display: flex;
+    flex: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 .image{
-    width: 15%;
-    height: 60px;
-    margin-top: 2%;
+    width: 5em;
+    height: 3em;
+    margin-left: 1em;
+    align-self: center;
 }
 #search{
-    padding: 1%;
-    font-size: 1em;
-    margin: 6%;
-    margin-top: 7%;
+    width: 13em;
+    height: 2em;
+    margin-right: 2.5em;
+    align-self: center;
+    font-size: 0.9em;
+
 }
 #container{
     width: 100%;
     height: 85%;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 #check{
     display: none;
@@ -56,28 +60,33 @@ header{
     background: #FFCB05;
     height: 100%;
     width: 15%;
-    position: absolute;/*quede fijo en pc*/
-    text-align: justify;
+    position: absolute;
     transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    -o-transition: all .2s linear;
 }
 nav{
     width: 100%;
     position: absolute;
     top: 60px;
 }
-nav a{
-    text-decoration: none;
-}
 .link{
+    width: 100%;
+    text-align: justify;
+    outline:none;
     background-color: #FFCB05;
-    padding: 20px;
-    font-size: 1em;/*tamaño de letra barra izquierda*/
-    transition: all .2s linear;
+    padding: 1em;
+    font-size: 1em;
+    /*tamañodeletrabarraizquierda*/transition: all .2s linear;
     color: #413D3D;
+    border: 0;
     border-bottom: 2px solid #F6F8FF ;
 }
 .link:hover{
     background-color: #205FA7;
+    color: #F6F8FF;
 }
 #section{
     width: 85%;
@@ -93,9 +102,18 @@ nav a{
     font-family: 'Bree Serif', serif;
     font-size: 2em;
 }
+.name{
+    text-transform: capitalize;
+}
+.type{
+    padding: 0.8em;
+    background-color: #205FA7;
+    color: white;
+    text-transform: capitalize;
+    letter-spacing: 0.2em;
+}
 /*botones desplegables*/
-ul.dropDown,
-ul.dropDown * {
+ul.dropDown {
 margin: 0;
 padding: 0;
 border: 0;
@@ -104,7 +122,7 @@ ul.dropDown {
 margin: 10px auto;
 padding: 0;
 list-style: none;
-width: 25%;
+width: 12%;
 font-size: 0.8em;
 text-align: center;
 }
@@ -122,12 +140,16 @@ text-decoration: none;
 box-sizing: border-box;
 }
 ul.dropDown li ul {
-max-height: 0;
-margin: 0;
-padding: 0;
-list-style: none;
-overflow: hidden;
-transition: .3s all ease-in;
+    max-height: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    transition: .3s all ease-in;
+    -webkit-transition: .3s all ease-in;
+    -moz-transition: .3s all ease-in;
+    -ms-transition: .3s all ease-in;
+    -o-transition: .3s all ease-in;
 }
 ul.dropDown li li a {
 padding: 10px 10px 10px 40px;
@@ -142,8 +164,12 @@ ul.dropDown li li:last-child a {
 border-bottom: 0;
 }
 ul.dropDown li:hover ul {
-max-height: 300px;
-transition: .3s all ease-in;
+    max-height: 300px;
+    transition: .3s all ease-in;
+    -webkit-transition: .3s all ease-in;
+    -moz-transition: .3s all ease-in;
+    -ms-transition: .3s all ease-in;
+    -o-transition: .3s all ease-in;
 }
 ul.dropDown li a:hover {
 background: #205FA7;
@@ -152,9 +178,8 @@ color: #F6F8FF;
 /*contenedor de pokemones*/
 .pokemonList{
     width: 100%;
-    /* height: 95%; 
-    overflow : scroll;*/
-    display: inline-flex;
+    height: 95%; 
+    display: flex;
     line-height: 0.5em;
     justify-content: space-around;
     flex-wrap: wrap;   
@@ -164,49 +189,53 @@ color: #F6F8FF;
     margin: 1%;
     border: #A1A1AE 1px solid;
 }
-footer{
-    width: 100%;
-    height: 30px;
-    background: #205FA7;
-    text-align: center;
-    color: #F6F8FF;
-    left: 0; /* Posicionamos la cabecera al lado izquierdo */
+table{
+    font-size: 1em;
+    width: 50%;
+    height: 80%;
+    font-weight: bold;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-collapse: collapse;
+    position: center;
 }
-.socialNetworks{
-    width: 20px;
-    height: 20px;
+table tr{
+    padding: 5px;
+}
+table td, table th {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+table th {
+    text-transform: uppercase;
+    background-color: #205FA7;
+    color: white;
+}
+table td {
+    text-transform: capitalize;
 }
 @media screen and (max-width:1100px) and (min-width:300px) {
     /* celular */
     body{
-        font-size: 1.5em;
+        font-size: 2em;
     }
     #section{
         width: 100%;
-        padding-left: 3%;
-        padding-right: 3%;
+        padding: 0;
     }
     .image{
-        width: 50%;
-        height: 100%;
+        width: 30%;
+        height: 50%;
         margin-top: 1%;
-    }
-    #header1{
-        width: 40%;
-        height: 100%;
-        margin-left: 10%;
-    }
-    #header2{
-        width: 60%;
-        height: 100%;
-        margin-left: 10%;
     }
     .bar{
         left: -300px;
-        width: 25%;
+        width: 30%;
     }
     .link{
-        font-size: 16pt;
+        font-size: 25pt;
     }
     #check:checked ~ .bar{
         transform: translateX(300px);
@@ -214,6 +243,9 @@ footer{
     header{
         height: 10%;
     }
+    ul.dropDown {
+        width: 25%;
+        }
     .conteinerPokemon{
         width: 20%;
         margin: 2%;
@@ -222,6 +254,55 @@ footer{
     }
     .pokemonList{
         line-height: 0.5em;
-        overflow : visible;
     }
+}
+footer{
+    width: 100%;
+    height: 5em;
+    background: #205FA7;
+    text-align: center;
+    color: #F6F8FF;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+.social{
+    padding-top: 0.8em;
+}
+.icon{
+    color:white;
+    text-decoration: none;
+    transition: all.5s;
+    padding: 0.3em;
+    width: 1.5em;
+    border-radius: 1rem;
+}
+.icon-facebook{
+    background: #2E406E;
+}
+.icon-twitter{
+    background: #339DC5;
+}
+.icon-youtube{
+    background: #E83028;
+}
+.icon-instagram{
+    background: #3f60a5;
+}
+.icon:hover{
+    padding: 0.8rem;
+}
+.btnGet{
+    background: #FFCB05;
+    border: 2px solid #F6F8FF ;
+    padding: 0.5em;
+    font-size: 1em;
+    color: #413D3D;
+    outline:none;
+}
+.btnGet:hover{
+    background-color: #205FA7;
+    color: #F6F8FF;
 }
