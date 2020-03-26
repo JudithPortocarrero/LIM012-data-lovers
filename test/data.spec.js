@@ -1,5 +1,5 @@
 import {
-  ordenarArrayAsc, ordenarArrayDes, ordenarArrayAz, ordenarArrayZa,
+  sortArrayAsc, sortArrayDes, sortArrayAz, sortArrayZa,
 } from '../src/data.js';
 
 const inputOrder = [{
@@ -167,7 +167,7 @@ describe('ordenado Ascendente', () => {
     expect(typeof ordenarArrayAsc).toBe('function');
   });
   it('ordenarAsc', () => {
-    expect(ordenarArrayAsc(inputOrder)).toEqual(outputOrderAsc);
+    expect(sortArrayAsc(inputOrder)).toEqual(outputOrderAsc);
   });
 });
 describe('ordenado Descendente', () => {
@@ -175,7 +175,7 @@ describe('ordenado Descendente', () => {
     expect(typeof ordenarArrayDes).toBe('function');
   });
   it('ordenarDes', () => {
-    expect(ordenarArrayDes(inputOrder)).toEqual(outputOrderDes);
+    expect(sortArrayDes(inputOrder)).toEqual(outputOrderDes);
   });
 });
 describe('ordenado de Az', () => {
@@ -183,7 +183,7 @@ describe('ordenado de Az', () => {
     expect(typeof ordenarArrayAz).toBe('function');
   });
   it('ordenarDes', () => {
-    expect(ordenarArrayAz(inputOrder)).toEqual(outputOrderAz);
+    expect(sortArrayAz(inputOrder)).toEqual(outputOrderAz);
   });
 });
 describe('ordenado de Za', () => {
@@ -191,6 +191,6 @@ describe('ordenado de Za', () => {
     expect(typeof ordenarArrayZa).toBe('function');
   });
   it('ordenarDes', () => {
-    expect(ordenarArrayZa(inputOrder)).toEqual(outputOrderZa);
+    expect(sortArrayZa(inputOrder)).toEqual(outputOrderZa);
   });
 });
