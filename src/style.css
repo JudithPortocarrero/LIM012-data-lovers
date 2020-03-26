@@ -26,7 +26,6 @@ header{
     justify-content: space-between;
     align-items: center;
 }
-
 .image{
     width: 5em;
     height: 3em;
@@ -63,6 +62,10 @@ header{
     width: 15%;
     position: absolute;
     transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    -o-transition: all .2s linear;
 }
 nav{
     width: 100%;
@@ -76,8 +79,7 @@ nav{
     background-color: #FFCB05;
     padding: 1em;
     font-size: 1em;
-    /*tamañodeletrabarraizquierda*/
-    transition: all .2s linear;
+    /*tamañodeletrabarraizquierda*/transition: all .2s linear;
     color: #413D3D;
     border: 0;
     border-bottom: 2px solid #F6F8FF ;
@@ -100,9 +102,18 @@ nav{
     font-family: 'Bree Serif', serif;
     font-size: 2em;
 }
+.name{
+    text-transform: capitalize;
+}
+.type{
+    padding: 0.8em;
+    background-color: #205FA7;
+    color: white;
+    text-transform: capitalize;
+    letter-spacing: 0.2em;
+}
 /*botones desplegables*/
-ul.dropDown,
-ul.dropDown * {
+ul.dropDown {
 margin: 0;
 padding: 0;
 border: 0;
@@ -128,13 +139,17 @@ border-top: 1px solid #F6F8FF;
 text-decoration: none;
 box-sizing: border-box;
 }
-ul.dropDown li ul { 
-    max-height: 0; 
-    margin: 0; 
-    padding: 0; 
-    list-style: none; 
-    overflow: hidden; 
-    transition: .3s all ease-in; 
+ul.dropDown li ul {
+    max-height: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    transition: .3s all ease-in;
+    -webkit-transition: .3s all ease-in;
+    -moz-transition: .3s all ease-in;
+    -ms-transition: .3s all ease-in;
+    -o-transition: .3s all ease-in;
 }
 ul.dropDown li li a {
 padding: 10px 10px 10px 40px;
@@ -148,7 +163,13 @@ box-sizing: border-box;
 ul.dropDown li li:last-child a {
 border-bottom: 0;
 }
-ul.dropDown li:hover ul { max-height: 300px; transition: .3s all ease-in; -webkit-transition: .3s all ease-in; -moz-transition: .3s all ease-in; -ms-transition: .3s all ease-in; -o-transition: .3s all ease-in;
+ul.dropDown li:hover ul {
+    max-height: 300px;
+    transition: .3s all ease-in;
+    -webkit-transition: .3s all ease-in;
+    -moz-transition: .3s all ease-in;
+    -ms-transition: .3s all ease-in;
+    -o-transition: .3s all ease-in;
 }
 ul.dropDown li a:hover {
 background: #205FA7;
@@ -168,10 +189,40 @@ color: #F6F8FF;
     margin: 1%;
     border: #A1A1AE 1px solid;
 }
+table{
+    font-size: 1em;
+    width: 50%;
+    height: 80%;
+    font-weight: bold;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-collapse: collapse;
+    position: center;
+}
+table tr{
+    padding: 5px;
+}
+table td, table th {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+table th {
+    text-transform: uppercase;
+    background-color: #205FA7;
+    color: white;
+}
+table td {
+    text-transform: capitalize;
+}
 @media screen and (max-width:1100px) and (min-width:300px) {
     /* celular */
     body{
         font-size: 2em;
+    }
+    .type{
+        font-size: 0.7em;
     }
     #section{
         width: 100%;
