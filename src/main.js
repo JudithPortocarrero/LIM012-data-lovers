@@ -8,34 +8,80 @@ const arrPokemon = data.pokemon;
 const showPokemonDescription = document.getElementById('showDescription');
 const pokemonList = document.getElementById('pokemonList');
 // --------------------------------------------------------------------------------
+const pokemonType = (arr) => {
+  let typesPoke = '';
+  for (let i = 0; i < arr.type.length; i += 1) {
+    typesPoke += `<span class="type${arr.type[i]}" >${arr.type[i]}</span>&nbsp&nbsp&nbsp`;
+  }
+  return typesPoke;
+};
 const showDescription = (arr) => {
+  let evolution = '';
+  evolution += `<div>
+                  <img src="https://www.serebii.net/pokemongo/pokemon/${arr.num}.png">
+                  <p>${arr.name}</p>
+                </div>`;
+  if (arr.evolution['prev-evolution'] !== undefined) {
+    evolution += `<div class="contentArrowImage"><img src="flecha.png" class="arrowImage"></div>
+                  <div>
+                    <img src="https://www.serebii.net/pokemongo/pokemon/${arr.evolution['prev-evolution'][0].num}.png">
+                    <p>${arr.evolution['prev-evolution'][0].name}</p>
+                  </div>
+                  `;
+    if (arr.evolution['prev-evolution'][0]['prev-evolution'] !== undefined) {
+      evolution += `<div class="contentArrowImage"><img src="flecha.png" class="arrowImage"></div>
+                    <div>
+                      <img src="https://www.serebii.net/pokemongo/pokemon/${arr.evolution['prev-evolution'][0]['prev-evolution'][0].num}.png">
+                      <p>${arr.evolution['prev-evolution'][0]['prev-evolution'][0].name}</p>
+                    </div>`;
+    }
+  }
+  if (arr.evolution['next-evolution'] !== undefined) {
+    evolution += `<div class="contentArrowImage"><img src="flecha.png" class="arrowImage"></div>
+                  <div>
+                    <img src="https://www.serebii.net/pokemongo/pokemon/${arr.evolution['next-evolution'][0].num}.png">
+                    <p>${arr.evolution['next-evolution'][0].name}</p>
+                  </div>`;
+    if (arr.evolution['next-evolution'][0]['next-evolution'] !== undefined) {
+      evolution += `<div class="contentArrowImage"><img src="flecha.png" class="arrowImage"></div>
+                    <div>
+                      <img src="https://www.serebii.net/pokemongo/pokemon/${arr.evolution['next-evolution'][0]['next-evolution'][0].num}.png">
+                      <p>${arr.evolution['next-evolution'][0]['next-evolution'][0].name}</p>
+                    </div>`;
+    }
+  }
+  if (arr.evolution['prev-evolution'] === undefined && arr.evolution['next-evolution'] === undefined) {
+    evolution += '<p>El pokemon no tiene evoluviones</p>';
+  }
   const infoPokemon = document.createElement('div');
   infoPokemon.setAttribute('class', 'showDescriptionPokemon');
   infoPokemon.innerHTML = `
     <div class="containerDescription">
-      <p class="titleContainer">N° ${arr.num}  ${arr.name}</p>
-      <div class="section1">
-        <div class="sectionImage"><img class="imageContainer" src="${arr.img}"></div>
-        <div class="sectionDescription">
-          <section><p class="boldFont">Tipo: </p>${arr.type}</section>
-          <section><p class="boldFont">Descripcion:</p>${arr.about}</section>
-          <div class="section2">
-            <section class="dates1">
-              <p class="fonts">Altura: ${arr.size.height}</p>
-              <p class="fonts">Peso: ${arr.size.weight}</p>
-              <p class="fonts">Huevo: ${arr.egg}</p>
-            </section>
-            <section class="dates2">
-              <p class="fonts">Ratio de aparicion: ${arr['spawn-chance']}</p>
-              <p class="fonts">Ratio de captura Base: ${arr.encounter['base-flee-rate']}</p>
-              <p class="fonts">Ratio de huida: ${arr.encounter['base-capture-rate']}</p>
-            </section>
-          </div>
+      <div class="datesPokemon">
+          <p class="titleContainer">N° ${arr.num}  ${arr.name}</p>
+          <div class="sectionImage"><img class="imageContainer" src="${arr.img}"></div>
+      </div>
+      <div class="datesPokemon2">
+        <h1 class="descriptionPokemon">
+          <div class="pokemonType"><p class="boldFont">Tipo: </p>${pokemonType(arr)}</div>
+          <div class="pokemonDescription"><p class="boldFont">Descripcion:</p>${arr.about}</div>
+        </h1>
+        <div class="dates">
+          <h1 class="dates1">
+            <p class="fonts">Altura: ${arr.size.height}</p>
+            <p class="fonts">Peso: ${arr.size.weight}</p>
+            <p class="fonts">Huevo: ${arr.egg}</p>
+          </h1>
+          <h1 class="dates2">
+            <p class="fonts">Ratio de aparicion: ${arr['spawn-chance']}</p>
+            <p class="fonts">Ratio de captura Base: ${arr.encounter['base-flee-rate']}</p>
+            <p class="fonts">Ratio de huida: ${arr.encounter['base-capture-rate']}</p>
+          </h1>
         </div>
       </div>
-      <button id="regresar" class="btnGet">Regresar</button>
     </div>
-  `;
+    <div class="evolutionPokemon">${evolution}</div>
+    <div class="btnRegresar"><button id="regresar" class="btnGet">Regresar</button></div>`;
   return infoPokemon;
 };
 const showPokemon = (arr) => {
@@ -48,7 +94,7 @@ const showPokemon = (arr) => {
         <img src="${arr[i].img}">
         <p>N°${arr[i].num}</p>
         <p class="name">${arr[i].name}</p>
-        <p class="type">${arr[i].type}</p>
+        <p class="type">${pokemonType(arr[i])}</p>
       </a>`;
     divElement.addEventListener('click', () => {
       showPokemonDescription.innerHTML = '';
@@ -100,7 +146,7 @@ const showPokemon2 = (arr) => {
             <p>N°${arr[i].num}</p>
             <p class="name">${arr[i].name}</p>
             <p class="km">${arr[i]['buddy-distance-km']} Km</p>
-            <p class="type">${arr[i].type}</p>
+            <p class="type">${pokemonType(arr[i])}</p>
           </a>
         </div>`;
   }
@@ -393,7 +439,7 @@ const dataPower = (arr, selectPower) => {
   }
   document.getElementById('powerTable').innerHTML = pokList;
 };
-// boton datos de poder
+// Boton datos de poder en Navegador
 document.querySelector('#showPowerData').addEventListener('click', () => {
   document.getElementById('pokedex').classList.add('ocultar');
   document.getElementById('getCandy').classList.add('ocultar');
@@ -402,7 +448,7 @@ document.querySelector('#showPowerData').addEventListener('click', () => {
   document.getElementById('powerData').classList.remove('ocultar');
   dataPower(sortPower(arrPokemon, 'atack'), 'atack');
 });
-// Datos de poder
+// Desplegable de datos de poder
 const sortPowerArray = document.querySelector('#sortPower');
 sortPowerArray.addEventListener('change', () => {
   const powerSelect = sortPowerArray.value;
@@ -416,6 +462,18 @@ const search = document.getElementById('search');
 search.addEventListener('keyup', () => {
   const inputText = search.value.toLowerCase();
   showPokemon(searchPokemon(arrPokemon, inputText));
+  if (document.getElementById('pokemonList') === '') {
+    pokemonList.innerHTML = '<h1>Pokemon no encontrado<h1>';
+  }
+  if (search.value !== '') {
+    document.getElementById('showListpokemon').innerHTML = '';
+    for (let i = 0; i < searchPokemon(arrPokemon, inputText).length; i += 1) {
+      document.getElementById('showListpokemon').innerHTML += `
+        <li class="li">${searchPokemon(arrPokemon, inputText)[i].name}</li>
+        `;
+    }
+  }
+  if (search.value === '') {
+    document.getElementById('showListpokemon').innerHTML = '';
+  }
 });
-// Mostrar datos de cada pokemon
-// <div id="${arr[i].num}" class="conteinerPokemon">
