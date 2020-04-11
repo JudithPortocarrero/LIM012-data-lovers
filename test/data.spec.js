@@ -1,5 +1,5 @@
 import {
-  sortArray, filterKm, sortPower, comparePokemon, searchPokemon,d
+  sortArray, filterKm, sortPower, comparePokemon, searchPokemon,
 } from '../src/data.js';
 
 const inputOrder = [{ num: '002', name: 'ivysaur' }, { num: '003', name: 'venusaur' }, { num: '001', name: 'bulbasaur' }];
