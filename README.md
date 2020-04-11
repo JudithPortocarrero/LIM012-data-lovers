@@ -1,5 +1,25 @@
 # Data Lovers
 
+Definición del producto
+Para este proyecto hemos elegido la data de PoKemon, el cual empezamos con elegir nuestro usuario al cual estaría dirigido nuestro proyecto. Definimo que nuestros usuarios serían los jugadores novatos de pokemon Go, una vez elegido nuestro usuario empezamos con la creacion de nuestras historias de usuario para poder identificar las necesidades de nuestro usuario, luego pasamos a diseñar los prototipos de baja fidelidad de esas historias de usuarios, enfocandonos en los datos que al usuario le gustría conocer del juego.
+
+Diseño de la Interfaz de Usuario
+Prototipo de baja fidelidad
+![prototipo de baja fidelidad](imagenes/prototipoBaja1.jpg)
+![prototipo de baja fidelidad](imagenes/prototipoBaja2.jpg)
+![prototipo de baja fidelidad](imagenes/prototipoBaja3.jpg)
+![prototipo de baja fidelidad](imagenes/prototipoBaja4.jpg)
+![prototipo de baja fidelidad](imagenes/prototipoBaja5.jpg)
+
+Prototipo de alta 
+![prototipo de alta](imagenes/prototipoAlta1.png)
+![prototipo de alta](imagenes/prototipoAlta2.png)
+![prototipo de alta](imagenes/prototipoAlta3.png)
+![prototipo de alta](imagenes/prototipoAlta4.png)
+![prototipo de alta](imagenes/prototipoAlta5.png)
+
+Testeos de usabilidad
+En el proceso de la creación del diseño de los prototipos de baja hicimos los test de usabilidad con algunas de nuestras compañeras, lo cual nos sirvió mucho para definir nuestro diseño y la implementación de una leyenda en una de nuestras historias ya que nuestros usuarios son novato y no conocen algunos términos del juego que estan en ingles, también implementamos un boton de rgresar que permite regresar a la pokedex una vez que hagas clic en un pokemon para ver sus características. 
 ## Índice
 
 * [1. Preámbulo](#1-preámbulo)

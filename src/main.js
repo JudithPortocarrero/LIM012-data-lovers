@@ -125,6 +125,7 @@ document.querySelector('#showPokedex').addEventListener('click', () => {
   document.getElementById('powerData').classList.add('ocultar');
   document.getElementById('comparePokemon').classList.add('ocultar');
   document.getElementById('showDescription').classList.add('ocultar');
+  document.getElementById('search').classList.remove('ocultar');
   document.getElementById('pokedex').classList.remove('ocultar');
   showPokemon(sortArray(arrPokemon, 'upward'));
 });
@@ -154,6 +155,7 @@ const showPokemon2 = (arr) => {
 };
 // boton ganar caramelos
 document.querySelector('#showGetCandy').addEventListener('click', () => {
+  document.getElementById('search').classList.add('ocultar');
   document.getElementById('pokedex').classList.add('ocultar');
   document.getElementById('powerData').classList.add('ocultar');
   document.getElementById('comparePokemon').classList.add('ocultar');
@@ -175,6 +177,7 @@ filterArray.addEventListener('change', () => {
 // --------------------------------------------------------------------------------
 // boton comparar pokemones
 document.querySelector('#showComparePokemon').addEventListener('click', () => {
+  document.getElementById('search').classList.add('ocultar');
   document.getElementById('getCandy').classList.add('ocultar');
   document.getElementById('pokedex').classList.add('ocultar');
   document.getElementById('powerData').classList.add('ocultar');
@@ -441,6 +444,7 @@ const dataPower = (arr, selectPower) => {
 };
 // Boton datos de poder en Navegador
 document.querySelector('#showPowerData').addEventListener('click', () => {
+  document.getElementById('search').classList.add('ocultar');
   document.getElementById('pokedex').classList.add('ocultar');
   document.getElementById('getCandy').classList.add('ocultar');
   document.getElementById('comparePokemon').classList.add('ocultar');
