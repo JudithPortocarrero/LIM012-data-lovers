@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const sortArrayAsc = (arr) => {
   let arrPokemonesNumAsc = [];
   arrPokemonesNumAsc = arr.sort((a, b) => a.num - b.num);
@@ -25,6 +26,24 @@ export const sortArrayZa = (arr) => {
     } return -1;
   });
   return arrPokemonesZa;
+=======
+export const sortArray = (arr, condition) => {
+  let arrPokemon = [];
+  switch (condition) {
+    case 'upward': arrPokemon = arr.sort((a, b) => a.num - b.num);
+      break;
+    case 'falling':
+      arrPokemon = arr.sort((a, b) => b.num - a.num);
+      break;
+    case 'sortAz':
+      arrPokemon = arr.sort((a, b) => ((a.name > b.name) ? 1 : -1));
+      break;
+    default:
+      arrPokemon = arr.sort((a, b) => ((b.name > a.name) ? 1 : -1));
+      break;
+  }
+  return arrPokemon;
+>>>>>>> 45df131... proyecto terminado
 };
 // filtrar por km
 export const filterOneKm = (arr) => {

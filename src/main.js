@@ -45,10 +45,17 @@ window.addEventListener('load', cargar, false);
 document.querySelector('#showPokedex').addEventListener('click', () => {
   document.getElementById('getCandy').classList.add('ocultar');
   document.getElementById('powerData').classList.add('ocultar');
+<<<<<<< HEAD
+=======
+  document.getElementById('comparePokemon').classList.add('ocultar');
+  document.getElementById('showDescription').classList.add('ocultar');
+  document.getElementById('search').classList.remove('ocultar');
+>>>>>>> 45df131... proyecto terminado
   document.getElementById('pokedex').classList.remove('ocultar');
   showPokemon(sortArrayAsc(arrPokemon));
 });
 document.querySelector('#showGetCandy').addEventListener('click', () => {
+  document.getElementById('search').classList.add('ocultar');
   document.getElementById('pokedex').classList.add('ocultar');
   document.getElementById('powerData').classList.add('ocultar');
   document.getElementById('getCandy').classList.remove('ocultar');
@@ -83,12 +90,24 @@ document.querySelector('#oneKm').addEventListener('click', () => {
   document.getElementById('total').innerHTML = `N° pokemones de 1KM: ${totalKm}`;
   showPokemon2(filterOneKm(arrPokemon));
 });
+<<<<<<< HEAD
 document.querySelector('#threeKm').addEventListener('click', () => {
   document.getElementById('total').innerHTML = '';
   document.getElementById('pokemonList2').innerHTML = '';
   const totalKm = filterthreeKm(arrPokemon).length;
   document.getElementById('total').innerHTML = `N° pokemones de 3KM: ${totalKm}`;
   showPokemon2(filterthreeKm(arrPokemon));
+=======
+// --------------------------------------------------------------------------------
+// boton comparar pokemones
+document.querySelector('#showComparePokemon').addEventListener('click', () => {
+  document.getElementById('search').classList.add('ocultar');
+  document.getElementById('getCandy').classList.add('ocultar');
+  document.getElementById('pokedex').classList.add('ocultar');
+  document.getElementById('powerData').classList.add('ocultar');
+  document.getElementById('showDescription').classList.add('ocultar');
+  document.getElementById('comparePokemon').classList.remove('ocultar');
+>>>>>>> 45df131... proyecto terminado
 });
 document.querySelector('#fiveKm').addEventListener('click', () => {
   document.getElementById('total').innerHTML = '';
@@ -197,6 +216,7 @@ const datos4 = (arr) => {
   document.getElementById('powerTable').innerHTML = pokList;
 };
 document.querySelector('#showPowerData').addEventListener('click', () => {
+  document.getElementById('search').classList.add('ocultar');
   document.getElementById('pokedex').classList.add('ocultar');
   document.getElementById('getCandy').classList.add('ocultar');
   document.getElementById('powerData').classList.remove('ocultar');

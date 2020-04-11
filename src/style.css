@@ -3,6 +3,7 @@
  }
 body{
     background: #F6F8FF;
+<<<<<<< HEAD
     width: 100%;
     height: 100%;
     margin-top: 0%;
@@ -16,13 +17,23 @@ body{
     flex-direction: column;
     align-items: flex-start;
 }
+=======
+    margin: 0;
+    color: #413d3d;
+    font-family: 'Lato', sans-serif;
+ }
+/*Header*/
+>>>>>>> 45df131... proyecto terminado
 header{
     width: 100%;
     height: 10%;
     background: #205FA7;
     display: flex;
+<<<<<<< HEAD
     flex: wrap;
     flex-direction: row;
+=======
+>>>>>>> 45df131... proyecto terminado
     justify-content: space-between;
     align-items: center;
 }
@@ -40,12 +51,18 @@ header{
     font-size: 0.9em;
 
 }
+<<<<<<< HEAD
 #container{
     width: 100%;
     height: 85%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+=======
+/*Barra Lateral de Navegación*/
+#container{
+    position: sticky;
+>>>>>>> 45df131... proyecto terminado
 }
 #check{
     display: none;
@@ -94,9 +111,14 @@ nav{
     text-align: center;
     /* float:left; */
 }
+<<<<<<< HEAD
 #pokedex{
     width: 100%;
     height: 100%;
+=======
+#pokedex,#getCandy,#comparePokemon,#powerData{
+    text-align: center;
+>>>>>>> 45df131... proyecto terminado
 }
 .title{
     font-family: 'Bree Serif', serif;
@@ -180,36 +202,180 @@ color: #F6F8FF;
     width: 100%;
     height: 95%; 
     display: flex;
+<<<<<<< HEAD
     line-height: 0.5em;
+=======
+    flex-direction: row;
+    justify-content: space-between;    
+}
+.titleContainer{
+    margin-left: 2.5rem;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+.sectionImage{
+    margin-left: 2.5rem;
+}
+.imageContainer{
+    width: 90%;
+    padding: 0.2rem;
+    border: #A1A1AE 0.1em solid;
+    border-radius: 0.5rem;
+    margin: 0;
+}
+.boldFont{
+    font-size: 1.5em;
+    color: #205FA7;
+    font-weight: bold;
+}
+.datesPokemon{
+    width: 30%;
+}
+.pokemonType{
+    color: white;
+}
+.datesPokemon2{
+    width: 70%;
+    font-size: 0.5rem;
+    margin-top: 4.5rem;
+}
+.dates{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: #A1A1AE 0.2em solid;
+    border-radius: 1rem;
+    width: 60%;
+}
+.dates1, .dates2{
+    line-height: 1em;
+}
+.contentArrowImage{
+    width: 20%;
+    height: 20%;
+}
+.arrowImage{
+    width: 50%;
+    height: 50%;
+}
+.pokemonDescription{
+    width: 90%;
+}
+.evolutionPokemon{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20%;
+    margin-top: 1rem;
+    border: #A1A1AE 0.1em solid;
+    border-radius: 1rem; 
+}
+.btnRegresar{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Comparación de Pokemones*/
+#inputCompare{
+    height: 100%;
+    padding-left: 15%;
+    display: flex;
+>>>>>>> 45df131... proyecto terminado
     justify-content: space-around;
     flex-wrap: wrap;   
 }
 .conteinerPokemon{
     width: 20%;
+<<<<<<< HEAD
     margin: 1%;
     border: #A1A1AE 1px solid;
 }
 table{
     font-size: 1em;
-    width: 50%;
-    height: 80%;
+=======
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em;
+    padding: 2em;
+    border: #A1A1AE 0.2em solid;
+    color: #205FA7;
     font-weight: bold;
-    margin: auto;
+    cursor: pointer;
+    border-radius: 2em;
+}
+#showPokemon1, #showPokemon2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#searchPokemon1, #searchPokemon2{
+    border: 0.1em solid #A1A1AE;
+    padding: 0.5em;
+    font-size: 1em;
+    color: #205FA7;
+    /* outline:none; */
+    border-radius: 0.5em;
+}
+.leyenda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.pleyenda{
+    width: 80%;
+    text-align: justify;
+    border: 0.1em solid #A1A1AE;
+    border-radius: 1em;
+}
+.pokemon{
+    width: 150px;
+}
+/* Tabla de Datos de Poder*/
+.items{
+    display: flex;
+    justify-content: center;
+}
+.imageAsh{
+    height: 300px;
+    width: 150px;
+    margin: 3rem;
+}
+.pikachu{
+    height: 300px;
+    width: 150px;
+    margin: 3rem;
+}
+#powerTable{
+>>>>>>> 45df131... proyecto terminado
+    width: 50%;
     margin-top: 2%;
-    margin-bottom: 2%;
     border-collapse: collapse;
-    position: center;
+    border: #A1A1AE 0.2em solid;
 }
 table tr{
-    padding: 5px;
+    padding: 3px;
+    border-top: groove;
+    text-align: center;
 }
+<<<<<<< HEAD
 table td, table th {
     border: 1px solid black;
     padding: 10px;
+=======
+table th, table td {
+    padding: 8px;
+>>>>>>> 45df131... proyecto terminado
     text-align: center;
 }
 table th {
     text-transform: uppercase;
+<<<<<<< HEAD
     background-color: #205FA7;
     color: white;
 }
@@ -218,6 +384,30 @@ table td {
 }
 @media screen and (max-width:1100px) and (min-width:300px) {
     /* celular */
+=======
+    border-style: groove;
+    font-weight: bold;
+    background-color: #A1A1AE  ;
+    border: #A1A1AE 0.2em solid;
+}
+table td {
+    text-transform: capitalize;
+    text-align: center;
+}   
+.pokeImage{
+    height: 4em;
+    width: 4em;
+}
+/* Responsive para celular */
+@media screen and (min-width:300px) and (max-width:600px)  {
+    #icon{
+        display: block;
+        background-color: #FFCB05;
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+    }
+>>>>>>> 45df131... proyecto terminado
     body{
         font-size: 2em;
     }
@@ -264,7 +454,6 @@ footer{
     color: #F6F8FF;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-content: center;
     justify-content: center;
 }
