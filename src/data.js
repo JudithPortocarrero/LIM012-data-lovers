@@ -28,7 +28,7 @@ export const filterKm = (arr, condition) => {
     arrFilterKM = arr.filter(object => object['buddy-distance-km'] === '20');
   }
   return arrFilterKM;
-};
+};// if (condition === 'twentyKm')
 export const sortPower = (arr, condition) => {
   let arrPokemonPower = [];
   if (condition === 'atack') {
