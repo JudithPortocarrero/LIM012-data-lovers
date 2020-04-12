@@ -212,10 +212,10 @@ header{
 }
 /*Comparación de Pokemones*/
 #inputCompare{
-    height: 100%;
     padding-left: 15%;
     display: flex;
     justify-content: space-around;
+    height: 10%;
 }
 #tableComparePokemon{
     display: inline-flex;
@@ -244,17 +244,17 @@ header{
     padding: 0.5em;
     font-size: 1em;
     color: #205FA7;
-    /* outline:none; */
+    outline:none;
     border-radius: 0.5em;
 }
 .leyenda{
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;   
 }
 .pleyenda{
-    width: 80%;
+    width: 60%;
+    padding: 1em;
     text-align: justify;
     border: 0.1em solid #A1A1AE;
     border-radius: 1em;
